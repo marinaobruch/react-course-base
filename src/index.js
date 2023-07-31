@@ -6,13 +6,7 @@ import App from "./App";
 // root.render(<App />);
 
 ReactDOM.render(
-  React.createElement(
-    "button",
-    {
-      disabled: true,
-    },
-    "Нажми на меня"
-  ),
+  <App />,
 
   document.getElementById("root")
 );
