@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./styles/App.css";
 import PostList from "./components/PostList";
+import MyButton from "./components/UI/button/MyButton";
+import MyInput from "./components/UI/input/MyInput";
 
 function App() {
   const [posts, setPosts] = useState([
@@ -11,18 +13,24 @@ function App() {
     { id: 5, title: "Python", body: "Description" },
   ]);
 
-  const [posts2, setPosts2] = useState([
-    { id: 6, title: "JavaScript", body: "Description" },
-    { id: 7, title: "HTML", body: "Description" },
-    { id: 8, title: "CSS", body: "Description" },
-    { id: 9, title: "React", body: "Description" },
-    { id: 10, title: "Python", body: "Description" },
-  ]);
+  const [title, setTitle] = useState("swswsw");
+
+  const addNewPost = () => {};
 
   return (
     <div className="App">
+      <form>
+        {/* Управляемый компонент */}
+        <MyInput
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          type="text"
+          placeholder="Post name"
+        />
+        <MyInput type="text" placeholder="Post discription" />
+        <MyButton onClick={addNewPost}>Create post</MyButton>
+      </form>
       <PostList posts={posts} title={"Posts lists 1"} />
-      <PostList posts={posts2} title={"Posts lists 2"} />
     </div>
   );
 }
