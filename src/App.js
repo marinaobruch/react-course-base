@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./styles/App.css";
 import PostList from "./components/PostList";
 import MyButton from "./components/UI/button/MyButton";
@@ -13,9 +13,13 @@ function App() {
     { id: 5, title: "Python", body: "Description" },
   ]);
 
-  const [title, setTitle] = useState("swswsw");
+  const [title, setTitle] = useState("");
+  const bodyInputRef = useRef();
 
-  const addNewPost = () => {};
+  const addNewPost = (e) => {
+    e.preventDefault();
+    console.log(bodyInputRef.current.value);
+  };
 
   return (
     <div className="App">
@@ -27,7 +31,13 @@ function App() {
           type="text"
           placeholder="Post name"
         />
-        <MyInput type="text" placeholder="Post discription" />
+
+        {/* Неуправляемый/ неконтролируемый компонент */}
+        <MyInput
+          ref={bodyInputRef}
+          type="text"
+          placeholder="Post discription"
+        />
         <MyButton onClick={addNewPost}>Create post</MyButton>
       </form>
       <PostList posts={posts} title={"Posts lists 1"} />
