@@ -7,11 +7,14 @@ const PostForm = ({ create }) => {
 
   const addNewPost = (e) => {
     e.preventDefault();
+
     const newPost = {
       ...post,
       id: Date.now(),
     };
+
     create(newPost);
+
     setPost({ title: "", body: "" });
   };
 
