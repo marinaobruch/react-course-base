@@ -45,7 +45,7 @@ function App() {
         <PostList
           remove={removePost}
           posts={sortedAndSearchedPosts}
-          title={"Posts lists 1"}
+          title={"Tools Post"}
         />
       ) : (
         <h1 style={{ textAlign: "center" }}>Posts not found </h1>
