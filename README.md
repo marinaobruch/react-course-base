@@ -2,6 +2,7 @@ App based on fundamental hooks and rules in React
 **Stack - React**
 
 **Done:**
+
 Understanging Component
 
 useState, useEffect;
@@ -33,6 +34,7 @@ Modal window. Reusable UI component;
 
 
 **In wirking:**
+
 Animation;
 
 Component life cycle;
