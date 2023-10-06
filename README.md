@@ -34,7 +34,8 @@ Modal window. Reusable UI component;
 
 
 
-**In wirking:**
+
+**In working:**
 
 Animation;
 
